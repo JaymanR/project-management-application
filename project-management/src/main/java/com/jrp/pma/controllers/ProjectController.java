@@ -13,24 +13,24 @@ import com.jrp.pma.entities.Project;
 @Controller
 @RequestMapping("/projects")
 public class ProjectController {
-	
+
 	@Autowired
 	ProjectRepository proRepo;
-	
+
 	@GetMapping("/new")
 	public String displayProjectForm(Model model) {
-		
+
 		Project aProject = new Project();
-		
+
 		model.addAttribute("project", aProject);
-		
-		return "new-project";
+
+		return "/projects/new-project";
 	}
-	
+
 	@PostMapping("/save")
 	public String createProject(Project project, Model model) {
 		proRepo.save(project);
-		
+
 		// redirecting to prevent duplicate submissions
 		return "redirect:/projects/new";
 	}
