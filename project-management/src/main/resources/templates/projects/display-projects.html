@@ -5,10 +5,14 @@
 </head>
 <body>
 	<nav th:replace="layouts::navbar"></nav>
-	<div>
-		<h4>Current Projects</h4>
-		<table>
-			<thead>
+	<div class="container">
+		<h3>Projects Directory</h3>
+		<hr>
+		<!-- New Project Button -->
+		<a th:href="@{/projects/new}" class="btn btn-primary btn-sm mb-3">
+			Add Project </a>
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
 				<tr>
 					<th>Project Name</th>
 					<th>Project Stage</th>
