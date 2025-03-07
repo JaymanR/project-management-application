@@ -21,7 +21,7 @@ public class HomeController {
 	@Autowired
 	EmployeeRepository empRepo;
 	
-	@GetMapping("/")
+	@GetMapping
 	public String displayHome(Model model) {
 		List<Project> projects = proRepo.findAll();
 		List<Employee> employees = empRepo.findAll();

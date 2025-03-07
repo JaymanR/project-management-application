@@ -25,7 +25,7 @@ public class ProjectController {
 	@Autowired
 	EmployeeRepository empRepo;
 
-	@GetMapping("")
+	@GetMapping
 	public String displayProjects(Model model) {
 		List<Project> projects = proRepo.findAll();
 		model.addAttribute("projects", projects);
