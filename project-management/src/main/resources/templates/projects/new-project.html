@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layouts::header">
+<head th:replace="~{layouts::header}">
 <title>New Project</title>
 </head>
 <body>
-	<nav th:replace="layouts::navbar"></nav>
+	<nav th:replace="~{layouts::navbar}"></nav>
 	<div class="container">
 		<form action="/projects/save" th:object="${project}" method="POST">
 			<input type="text" placeholder="Project Name"

@@ -24,7 +24,7 @@ public class EmployeeController {
 		List<Employee> employees = empRepo.findAll();
 		model.addAttribute("employees", employees);
 		
-		return "/employees/display-employees";
+		return "employees/display-employees";
 	}
 
 	@GetMapping("/new")
@@ -34,7 +34,7 @@ public class EmployeeController {
 		
 		model.addAttribute("employee", anEmployee);
 		
-		return "/employees/new-employee";
+		return "employees/new-employee";
 	}
 	
 	@PostMapping("/save")

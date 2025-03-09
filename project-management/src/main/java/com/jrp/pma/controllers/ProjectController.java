@@ -30,7 +30,7 @@ public class ProjectController {
 		List<Project> projects = proRepo.findAll();
 		model.addAttribute("projects", projects);
 
-		return "/projects/display-projects";
+		return "projects/display-projects";
 	}
 
 	@GetMapping("/new")
@@ -42,13 +42,13 @@ public class ProjectController {
 		model.addAttribute("project", aProject);
 		model.addAttribute("allEmployees", employees);
 
-		return "/projects/new-project";
+		return "projects/new-project";
 	}
 
 	@PostMapping("/save")
 	public String createProject(Project project, @RequestParam List<Long> employees, Model model) {
 		proRepo.save(project);
 		// redirecting to prevent duplicate submissions
-		return "redirect:/projects";
+		return "redirect:/projects/new";
 	}
 }

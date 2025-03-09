@@ -48,6 +48,6 @@ public class HomeController {
 		// [["NOTSTARTED", 1], ["INPROGRESS", 2], ["COMPLETED", 1]]
 		model.addAttribute("projectStatusCnt", jsonString);
 
-		return "/main/home";
+		return "main/home";
 	}
 }
