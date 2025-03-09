@@ -29,7 +29,7 @@ public class HomeController {
 	@GetMapping
 	public String displayHome(Model model) throws JsonProcessingException {
 
-		Map<String, Object> map = new HashMap();
+		//Map<String, Object> map = new HashMap();
 
 		List<Project> projects = proRepo.findAll();
 		model.addAttribute("projects", projects);

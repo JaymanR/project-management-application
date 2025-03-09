@@ -17,7 +17,7 @@ import jakarta.persistence.ManyToMany;
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="project_seq")
 	private long employeeId;
 
 	private String firstName;
