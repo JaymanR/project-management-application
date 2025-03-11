@@ -86,6 +86,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>pma-app</finalName>
 	</build>
-
 </project>

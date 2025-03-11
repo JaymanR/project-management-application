@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.jrp.pma.dao.EmployeeRepository;
-import com.jrp.pma.dao.ProjectRepository;
 import com.jrp.pma.entities.Employee;
 import com.jrp.pma.entities.Project;
+import com.jrp.pma.services.EmployeeService;
+import com.jrp.pma.services.ProjectService;
 
 @Controller
 @RequestMapping("/projects")
 public class ProjectController {
 
 	@Autowired
-	ProjectRepository proRepo;
+	ProjectService proService;
 
 	@Autowired
-	EmployeeRepository empRepo;
+	EmployeeService empService;
 
 	@GetMapping
 	public String displayProjects(Model model) {
-		List<Project> projects = proRepo.findAll();
+		List<Project> projects = proService.getAll();
 		model.addAttribute("projects", projects);
 
 		return "projects/display-projects";
@@ -37,7 +37,7 @@ public class ProjectController {
 	public String displayProjectForm(Model model) {
 
 		Project aProject = new Project();
-		List<Employee> employees = empRepo.findAll();
+		List<Employee> employees = empService.getAll();
 
 		model.addAttribute("project", aProject);
 		model.addAttribute("allEmployees", employees);
@@ -47,7 +47,7 @@ public class ProjectController {
 
 	@PostMapping("/save")
 	public String createProject(Project project, @RequestParam List<Long> employees, Model model) {
-		proRepo.save(project);
+		proService.save(project);
 		// redirecting to prevent duplicate submissions
 		return "redirect:/projects/new";
 	}
