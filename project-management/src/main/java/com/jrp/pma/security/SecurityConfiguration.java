@@ -1,22 +1,35 @@
 package com.jrp.pma.security;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfiguration {
+
+	private final DataSource dataSource;
+	
+	@Autowired
+	BCryptPasswordEncoder bCryptEncoder;
+
+	public SecurityConfiguration(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authorize) -> authorize
-				.requestMatchers("/projects/new", "/employees/new")
-				.hasRole("ADMIN").requestMatchers("/").authenticated().anyRequest().permitAll())
+				.requestMatchers("/", "/register", "/register/save").permitAll()
+				.requestMatchers("/projects/new", "/employees/new").hasRole("ADMIN")
+				.anyRequest().authenticated())
 				.httpBasic(Customizer.withDefaults()).formLogin(Customizer.withDefaults());
 
 		return http.build();
@@ -24,12 +37,15 @@ public class SecurityConfiguration {
 
 	@Bean
 	public UserDetailsService userDetailsService() {
-		UserDetails user1 = User.withDefaultPasswordEncoder().username("user").password("password").roles("USER")
-				.build();
 
-		UserDetails user2 = User.withDefaultPasswordEncoder().username("admin").password("admin").roles("ADMIN")
-				.build();
+		JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
 
-		return new InMemoryUserDetailsManager(user1, user2);
+		userDetailsManager.setUsersByUsernameQuery(
+				"SELECT username, password, enabled" + " FROM user_accounts" + " WHERE username = ?");
+
+		userDetailsManager
+				.setAuthoritiesByUsernameQuery("SELECT username, role" + " FROM user_accounts" + " WHERE username = ?");
+
+		return userDetailsManager;
 	}
 }
