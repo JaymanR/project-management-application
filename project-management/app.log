@@ -3812,3 +3812,631 @@ Caused by: org.hibernate.MappingException: The increment size of the [user_accou
 2025-03-12T16:44:43.210-04:00  INFO 13512 --- [project-management] [Thread-113] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-03-12T16:44:43.217-04:00  INFO 13512 --- [project-management] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
 2025-03-12T16:44:43.219-04:00  INFO 13512 --- [project-management] [Thread-113] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T16:44:43.322-04:00  INFO 13512 --- [project-management] [restartedMain] c.jrp.pma.ProjectManagementApplication   : Starting ProjectManagementApplication using Java 21.0.6 with PID 13512 (F:\Projects\Spring\project-management-application\project-management\target\classes started by jayma in F:\Projects\Spring\project-management-application\project-management)
+2025-03-12T16:44:43.322-04:00 DEBUG 13512 --- [project-management] [restartedMain] c.jrp.pma.ProjectManagementApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-12T16:44:43.322-04:00  INFO 13512 --- [project-management] [restartedMain] c.jrp.pma.ProjectManagementApplication   : The following 1 profile is active: "dev"
+2025-03-12T16:44:43.465-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-12T16:44:43.466-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12T16:44:43.471-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-03-12T16:44:43.473-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-12T16:44:43.473-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data LDAP repositories in DEFAULT mode.
+2025-03-12T16:44:43.475-04:00  INFO 13512 --- [project-management] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.jrp.pma.dao.EmployeeRepository; If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository
+2025-03-12T16:44:43.475-04:00  INFO 13512 --- [project-management] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.jrp.pma.dao.ProjectRepository; If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository
+2025-03-12T16:44:43.475-04:00  INFO 13512 --- [project-management] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.jrp.pma.dao.UserAccountRepository; If you want this repository to be a LDAP repository, consider annotating your entities with one of these annotations: org.springframework.ldap.odm.annotations.Entry (preferred), or consider extending one of the following types with your repository: org.springframework.data.ldap.repository.LdapRepository
+2025-03-12T16:44:43.475-04:00  INFO 13512 --- [project-management] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 LDAP repository interfaces.
+2025-03-12T16:44:43.557-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-12T16:44:43.573-04:00  INFO 13512 --- [project-management] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 249 ms
+2025-03-12T16:44:43.620-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12T16:44:43.732-04:00  INFO 13512 --- [project-management] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12T16:44:43.807-04:00  WARN 13512 --- [project-management] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12T16:44:43.815-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2025-03-12T16:44:43.817-04:00  INFO 13512 --- [project-management] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-03-12T16:44:43.883-04:00 DEBUG 13512 --- [project-management] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-12T16:44:43.931-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pma-springbootdb'
+2025-03-12T16:44:43.941-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.l.c.support.AbstractContextSource    : Property 'userDn' not set - anonymous context will be used for read-only operations
+2025-03-12T16:44:43.960-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-03-12T16:44:43.969-04:00  INFO 13512 --- [project-management] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-12T16:44:43.972-04:00  INFO 13512 --- [project-management] [restartedMain] c.jrp.pma.ProjectManagementApplication   : Started ProjectManagementApplication in 0.67 seconds (process running for 17234.508)
+2025-03-12T16:44:43.973-04:00  INFO 13512 --- [project-management] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-03-12T16:44:58.493-04:00  INFO 13512 --- [project-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-12T16:44:58.494-04:00  INFO 13512 --- [project-management] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-12T16:44:58.494-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /register
+2025-03-12T16:44:58.496-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /register
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.SecurityController, register, [{}] with arguments[s] = {}
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.SecurityController, register, [{userAccount=com.jrp.pma.entities.UserAccount@4c9f7d57}] with arguments[s] = {}
+2025-03-12T16:44:58.497-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:44:58.515-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-12T16:45:06.813-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /register/save
+2025-03-12T16:45:06.814-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /register/save
+2025-03-12T16:45:06.815-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:06.815-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.SecurityController, saveUser, [{userAccount=com.jrp.pma.entities.UserAccount@bc18a15, org.springframework.validation.BindingResult.userAccount=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.jrp.pma.entities.UserAccount@bc18a15] with arguments[s] = {}
+2025-03-12T16:45:06.815-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:06.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:06.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.SecurityController, saveUser, [{userAccount=com.jrp.pma.entities.UserAccount@bc18a15, org.springframework.validation.BindingResult.userAccount=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, com.jrp.pma.entities.UserAccount@bc18a15] with arguments[s] = {}
+2025-03-12T16:45:06.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:06.904-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-12T16:45:06.906-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-03-12T16:45:06.907-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-03-12T16:45:06.907-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:06.907-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{}] with arguments[s] = {}
+2025-03-12T16:45:06.907-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:06.924-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:06.924-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{versionNumber=dev, projects=[com.jrp.pma.entities.Project@126ba60, com.jrp.pma.entities.Project@3a49650a, com.jrp.pma.entities.Project@24a860e1, com.jrp.pma.entities.Project@71e9d6b0, com.jrp.pma.entities.Project@4f7887b9, com.jrp.pma.entities.Project@3c3a7bc9, com.jrp.pma.entities.Project@1d47083a, com.jrp.pma.entities.Project@3a574456], employeesListProjectCnt=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7b688215, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@75ff1049, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5af6565e, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5cb65016, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@63f119bf, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6e0120d0, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@62dcfe8, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@687519db, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@322c98b], projectStatusCnt=[{"label":"INPROGRESS","stageCount":"5"},{"label":"COMPLETED","stageCount":"1"},{"label":"NOTSTARTED","stageCount":"2"}]}] with arguments[s] = {}
+2025-03-12T16:45:06.925-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:06.930-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/employees?continue to session
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@14f5d4e, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@14f5d4e, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@14f5d4e, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@14f5d4e, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@306a6353
+2025-03-12T16:45:09.503-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-03-12T16:45:09.506-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-03-12T16:45:09.519-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /default-ui.css
+2025-03-12T16:45:14.752-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /login
+2025-03-12T16:45:14.895-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-03-12T16:45:14.896-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from F7D7B7F1D2F941B8ABAF1D70FED02B20
+2025-03-12T16:45:14.896-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2025-03-12T16:45:14.896-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@4591e832]
+2025-03-12T16:45:14.896-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]
+2025-03-12T16:45:14.896-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/employees?continue
+2025-03-12T16:45:14.899-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employees?continue
+2025-03-12T16:45:14.899-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Loaded matching saved request http://localhost:8080/employees?continue
+2025-03-12T16:45:14.899-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:14.899-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /employees?continue
+2025-03-12T16:45:14.900-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:14.900-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:45:14.900-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:14.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:14.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@414abada, com.jrp.pma.entities.Employee@631b7e2e, com.jrp.pma.entities.Employee@6e8072c0, com.jrp.pma.entities.Employee@cd47ffc, com.jrp.pma.entities.Employee@5f40cea1, com.jrp.pma.entities.Employee@70a86bee, com.jrp.pma.entities.Employee@4672d0a7, com.jrp.pma.entities.Employee@4c802018, com.jrp.pma.entities.Employee@72d68502]}] with arguments[s] = {}
+2025-03-12T16:45:14.902-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:19.171-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:45:19.171-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:19.172-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:45:19.172-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:19.172-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:45:19.172-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:19.176-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:19.176-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@37ad5271, com.jrp.pma.entities.Employee@33c54039, com.jrp.pma.entities.Employee@55dbebec, com.jrp.pma.entities.Employee@36b22a34, com.jrp.pma.entities.Employee@74be788d, com.jrp.pma.entities.Employee@7da4cfc, com.jrp.pma.entities.Employee@7dab5064, com.jrp.pma.entities.Employee@790666e4, com.jrp.pma.entities.Employee@1539f198]}] with arguments[s] = {}
+2025-03-12T16:45:19.176-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:20.363-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:45:20.364-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:20.364-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:45:20.364-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:20.364-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:45:20.364-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:20.367-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:20.367-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@306723de, com.jrp.pma.entities.Project@29a8071a, com.jrp.pma.entities.Project@1c8b6ef4, com.jrp.pma.entities.Project@5842e3ab, com.jrp.pma.entities.Project@547b7751, com.jrp.pma.entities.Project@77ae8da2, com.jrp.pma.entities.Project@6989166d, com.jrp.pma.entities.Project@2149dc51]}] with arguments[s] = {}
+2025-03-12T16:45:20.367-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:20.944-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:45:20.944-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:20.944-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:45:20.945-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:20.945-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:45:20.945-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:20.948-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:20.948-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@6a466809, com.jrp.pma.entities.Employee@e4b762, com.jrp.pma.entities.Employee@6d213c6f, com.jrp.pma.entities.Employee@58911eab, com.jrp.pma.entities.Employee@786b4c96, com.jrp.pma.entities.Employee@a58be09, com.jrp.pma.entities.Employee@5a832ef0, com.jrp.pma.entities.Employee@2b0b79a4, com.jrp.pma.entities.Employee@6688b219]}] with arguments[s] = {}
+2025-03-12T16:45:20.948-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:21.636-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:45:21.637-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:21.637-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:45:21.637-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:21.637-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:45:21.637-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:21.640-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:21.640-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@6c56c5e8, com.jrp.pma.entities.Project@6a582a37, com.jrp.pma.entities.Project@77f188d9, com.jrp.pma.entities.Project@4cbb18ca, com.jrp.pma.entities.Project@9932390, com.jrp.pma.entities.Project@36b40998, com.jrp.pma.entities.Project@2a2af3b3, com.jrp.pma.entities.Project@771074f9]}] with arguments[s] = {}
+2025-03-12T16:45:21.640-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:45:22.982-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /projects/new
+2025-03-12T16:45:22.982-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:22.982-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-03-12T16:45:22.983-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-03-12T16:45:22.983-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:22.983-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-03-12T16:45:25.003-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:45:25.004-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:45:25.004-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:45:25.004-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:25.004-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:45:25.004-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:45:25.006-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:45:25.006-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@4d5376be, com.jrp.pma.entities.Project@36840c2b, com.jrp.pma.entities.Project@aa803cc, com.jrp.pma.entities.Project@2c440a73, com.jrp.pma.entities.Project@79fcc713, com.jrp.pma.entities.Project@72356b3e, com.jrp.pma.entities.Project@5efba428, com.jrp.pma.entities.Project@ee1c593]}] with arguments[s] = {}
+2025-03-12T16:45:25.006-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:25.452-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /projects/new
+2025-03-12T16:52:25.453-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:25.453-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-03-12T16:52:25.453-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-03-12T16:52:25.454-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:25.454-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-03-12T16:52:26.480-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:52:26.481-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:26.481-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:52:26.481-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:26.481-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:52:26.481-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:26.484-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:26.484-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@943abbd, com.jrp.pma.entities.Project@154b3331, com.jrp.pma.entities.Project@7a2cd17a, com.jrp.pma.entities.Project@1f445d50, com.jrp.pma.entities.Project@59895d24, com.jrp.pma.entities.Project@66b7276b, com.jrp.pma.entities.Project@27bbb63f, com.jrp.pma.entities.Project@149ddd2]}] with arguments[s] = {}
+2025-03-12T16:52:26.484-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:27.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:52:27.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:27.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:52:27.208-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:27.208-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:52:27.208-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:27.210-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:27.210-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@14a8d2fa, com.jrp.pma.entities.Employee@2843b794, com.jrp.pma.entities.Employee@aef5e5f, com.jrp.pma.entities.Employee@5ddff01e, com.jrp.pma.entities.Employee@663e5571, com.jrp.pma.entities.Employee@4ba4692, com.jrp.pma.entities.Employee@19835227, com.jrp.pma.entities.Employee@5168195c, com.jrp.pma.entities.Employee@4f3f7a51]}] with arguments[s] = {}
+2025-03-12T16:52:27.211-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:27.961-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:52:27.962-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:27.962-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:52:27.962-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:27.962-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:52:27.962-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:27.964-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:27.964-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@6ecc378a, com.jrp.pma.entities.Project@7cbd75d4, com.jrp.pma.entities.Project@17a65b6f, com.jrp.pma.entities.Project@171ae83c, com.jrp.pma.entities.Project@60358e20, com.jrp.pma.entities.Project@51b0f257, com.jrp.pma.entities.Project@3638c688, com.jrp.pma.entities.Project@2cb185df]}] with arguments[s] = {}
+2025-03-12T16:52:27.964-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:31.685-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /logout
+2025-03-12T16:52:31.697-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /default-ui.css
+2025-03-12T16:52:33.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /logout
+2025-03-12T16:52:33.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:33.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.s.w.a.logout.LogoutFilter            : Logging out [UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[null]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F7D7B7F1D2F941B8ABAF1D70FED02B20], Granted Authorities=[null]]]
+2025-03-12T16:52:33.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.s.w.a.l.SecurityContextLogoutHandler : Invalidated session C3346512FE210FDD3C411B3498AC2BAF
+2025-03-12T16:52:33.046-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?logout
+2025-03-12T16:52:33.049-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /login?logout
+2025-03-12T16:52:33.062-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /default-ui.css
+2025-03-12T16:52:41.386-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /login
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] .s.ChangeSessionIdAuthenticationStrategy : Changed session id from F5109F8F8037E7F2DDAEB2E4CC53766B
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@2f4ed06d]
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]
+2025-03-12T16:52:41.460-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /
+2025-03-12T16:52:41.463-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-03-12T16:52:41.464-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-03-12T16:52:41.464-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:41.464-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{}] with arguments[s] = {}
+2025-03-12T16:52:41.464-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:41.470-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:41.470-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{versionNumber=dev, projects=[com.jrp.pma.entities.Project@2eeb1d0a, com.jrp.pma.entities.Project@39e31fa8, com.jrp.pma.entities.Project@45acdd5a, com.jrp.pma.entities.Project@35580eda, com.jrp.pma.entities.Project@69b08d3f, com.jrp.pma.entities.Project@32cfb78b, com.jrp.pma.entities.Project@3b3374b5, com.jrp.pma.entities.Project@11853c3a], employeesListProjectCnt=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@c8051ed, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6aa835ca, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7db2e8c4, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7dd542dc, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@73d46bb2, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@58f91667, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@32673174, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@65f34646, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@352a28b1], projectStatusCnt=[{"label":"INPROGRESS","stageCount":"5"},{"label":"COMPLETED","stageCount":"1"},{"label":"NOTSTARTED","stageCount":"2"}]}] with arguments[s] = {}
+2025-03-12T16:52:41.470-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:41.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:44.437-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:52:44.438-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:44.438-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:52:44.438-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:44.438-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:52:44.438-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:44.441-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:44.441-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@45984632, com.jrp.pma.entities.Employee@5b5fb933, com.jrp.pma.entities.Employee@2b622028, com.jrp.pma.entities.Employee@65ef1f24, com.jrp.pma.entities.Employee@11e6f901, com.jrp.pma.entities.Employee@320ed253, com.jrp.pma.entities.Employee@4014de10, com.jrp.pma.entities.Employee@43c4681, com.jrp.pma.entities.Employee@644d0cb7]}] with arguments[s] = {}
+2025-03-12T16:52:44.441-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:45.358-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /employees/new
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /employees/new
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{}] with arguments[s] = {}
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{employee=com.jrp.pma.entities.Employee@532196ec}] with arguments[s] = {}
+2025-03-12T16:52:45.359-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:46.204-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:52:46.204-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:46.204-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:52:46.205-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:46.205-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:52:46.205-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:46.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:46.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@4c697aec, com.jrp.pma.entities.Project@1e7d2743, com.jrp.pma.entities.Project@2c175b3, com.jrp.pma.entities.Project@34348755, com.jrp.pma.entities.Project@7e656806, com.jrp.pma.entities.Project@a214411, com.jrp.pma.entities.Project@2f9cadc9, com.jrp.pma.entities.Project@4ef2f493]}] with arguments[s] = {}
+2025-03-12T16:52:46.207-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /projects/new
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /projects/new
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{}] with arguments[s] = {}
+2025-03-12T16:52:46.689-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:46.691-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:46.691-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{project=com.jrp.pma.entities.Project@2f0cc87b, allEmployees=[com.jrp.pma.entities.Employee@7e6ffc0b, com.jrp.pma.entities.Employee@68afc4cb, com.jrp.pma.entities.Employee@a25c372, com.jrp.pma.entities.Employee@67000613, com.jrp.pma.entities.Employee@1728ae35, com.jrp.pma.entities.Employee@79024045, com.jrp.pma.entities.Employee@eb547e6, com.jrp.pma.entities.Employee@5452f985, com.jrp.pma.entities.Employee@5cf436c4]}] with arguments[s] = {}
+2025-03-12T16:52:46.691-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:47.181-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:52:47.182-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:47.182-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:52:47.182-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:47.182-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:52:47.182-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:47.184-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:47.185-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@30d9a200, com.jrp.pma.entities.Employee@697c648, com.jrp.pma.entities.Employee@53d372a9, com.jrp.pma.entities.Employee@655fd745, com.jrp.pma.entities.Employee@3bc68cf7, com.jrp.pma.entities.Employee@6ac9c3d7, com.jrp.pma.entities.Employee@516b7e9e, com.jrp.pma.entities.Employee@3adac91e, com.jrp.pma.entities.Employee@41ffdf75]}] with arguments[s] = {}
+2025-03-12T16:52:47.185-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:52:47.734-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:47.736-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:47.737-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@6393fbfe, com.jrp.pma.entities.Project@1030c8ef, com.jrp.pma.entities.Project@1f428ffc, com.jrp.pma.entities.Project@6684c50c, com.jrp.pma.entities.Project@1896a420, com.jrp.pma.entities.Project@a55529, com.jrp.pma.entities.Project@392d0e34, com.jrp.pma.entities.Project@196c6f59]}] with arguments[s] = {}
+2025-03-12T16:52:47.737-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /projects/new
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /projects/new
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{}] with arguments[s] = {}
+2025-03-12T16:52:48.307-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:48.309-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:48.310-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{project=com.jrp.pma.entities.Project@1c7ab953, allEmployees=[com.jrp.pma.entities.Employee@2ae17693, com.jrp.pma.entities.Employee@4ebaee24, com.jrp.pma.entities.Employee@afee266, com.jrp.pma.entities.Employee@2bd4a2dd, com.jrp.pma.entities.Employee@2fd4f7ad, com.jrp.pma.entities.Employee@2612eba5, com.jrp.pma.entities.Employee@5a518f18, com.jrp.pma.entities.Employee@309bd91f, com.jrp.pma.entities.Employee@379e9d08]}] with arguments[s] = {}
+2025-03-12T16:52:48.310-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-4] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:54.464-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /projects/save
+2025-03-12T16:52:54.465-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:54.465-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /projects/save
+2025-03-12T16:52:54.469-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:54.469-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, createProject, [com.jrp.pma.entities.Project@4a44bce8, [52], {project=com.jrp.pma.entities.Project@4a44bce8, org.springframework.validation.BindingResult.project=org.springframework.validation.BeanPropertyBindingResult: 0 errors}] with arguments[s] = {}
+2025-03-12T16:52:54.469-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:54.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:54.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, createProject, [com.jrp.pma.entities.Project@4a44bce8, [52], {project=com.jrp.pma.entities.Project@4a44bce8, org.springframework.validation.BindingResult.project=org.springframework.validation.BeanPropertyBindingResult: 0 errors}] with arguments[s] = {}
+2025-03-12T16:52:54.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-5] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /projects/new
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /projects/new
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{}] with arguments[s] = {}
+2025-03-12T16:52:54.479-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:54.482-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:54.482-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjectForm, [{project=com.jrp.pma.entities.Project@466534b1, allEmployees=[com.jrp.pma.entities.Employee@e2dca65, com.jrp.pma.entities.Employee@161d2c49, com.jrp.pma.entities.Employee@999c10f, com.jrp.pma.entities.Employee@79f7cffe, com.jrp.pma.entities.Employee@6d70ff9a, com.jrp.pma.entities.Employee@12d0b4f7, com.jrp.pma.entities.Employee@641fb33d, com.jrp.pma.entities.Employee@5e81afdd, com.jrp.pma.entities.Employee@1ab3003]}] with arguments[s] = {}
+2025-03-12T16:52:54.482-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-6] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:55.994-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:52:55.995-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:55.995-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:52:55.995-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:55.995-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:52:55.995-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:55.997-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:55.997-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@75a824d, com.jrp.pma.entities.Employee@1267f608, com.jrp.pma.entities.Employee@fdf4469, com.jrp.pma.entities.Employee@1346a3fa, com.jrp.pma.entities.Employee@1d9aafee, com.jrp.pma.entities.Employee@63ad5320, com.jrp.pma.entities.Employee@59756a5c, com.jrp.pma.entities.Employee@6442494, com.jrp.pma.entities.Employee@27083b05]}] with arguments[s] = {}
+2025-03-12T16:52:55.997-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-7] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:52:56.826-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /employees/new
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /employees/new
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{}] with arguments[s] = {}
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{employee=com.jrp.pma.entities.Employee@15460129}] with arguments[s] = {}
+2025-03-12T16:52:56.827-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-8] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:02.041-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /employees/save
+2025-03-12T16:53:02.042-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:53:02.042-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /employees/save
+2025-03-12T16:53:02.042-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.042-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, createEmployee, [com.jrp.pma.entities.Employee@5ba281e9, {employee=com.jrp.pma.entities.Employee@5ba281e9, org.springframework.validation.BindingResult.employee=org.springframework.validation.BeanPropertyBindingResult: 0 errors}] with arguments[s] = {}
+2025-03-12T16:53:02.042-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:53:02.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, createEmployee, [com.jrp.pma.entities.Employee@5ba281e9, {employee=com.jrp.pma.entities.Employee@5ba281e9, org.springframework.validation.BindingResult.employee=org.springframework.validation.BeanPropertyBindingResult: 0 errors}] with arguments[s] = {}
+2025-03-12T16:53:02.045-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-9] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /employees/new
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /employees/new
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{}] with arguments[s] = {}
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployeeForm, [{employee=com.jrp.pma.entities.Employee@166b1ac0}] with arguments[s] = {}
+2025-03-12T16:53:02.048-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-10] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:02.944-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /employees
+2025-03-12T16:53:02.945-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:53:02.945-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /employees
+2025-03-12T16:53:02.946-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.946-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{}] with arguments[s] = {}
+2025-03-12T16:53:02.946-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:53:02.948-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:02.949-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.EmployeeController, displayEmployees, [{employees=[com.jrp.pma.entities.Employee@3e075243, com.jrp.pma.entities.Employee@4b126b40, com.jrp.pma.entities.Employee@2f786f04, com.jrp.pma.entities.Employee@4647321f, com.jrp.pma.entities.Employee@4c0f8645, com.jrp.pma.entities.Employee@15412d50, com.jrp.pma.entities.Employee@1b796f22, com.jrp.pma.entities.Employee@24ea970e, com.jrp.pma.entities.Employee@780f8133, com.jrp.pma.entities.Employee@58971273]}] with arguments[s] = {}
+2025-03-12T16:53:02.949-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-1] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:04.471-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /projects
+2025-03-12T16:53:04.472-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T16:53:04.472-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /projects
+2025-03-12T16:53:04.472-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:04.472-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{}] with arguments[s] = {}
+2025-03-12T16:53:04.472-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:53:04.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:04.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.ProjectController, displayProjects, [{projects=[com.jrp.pma.entities.Project@523b7304, com.jrp.pma.entities.Project@5290d22c, com.jrp.pma.entities.Project@1e9135f5, com.jrp.pma.entities.Project@19dda4fb, com.jrp.pma.entities.Project@473c7090, com.jrp.pma.entities.Project@3ec1b7c3, com.jrp.pma.entities.Project@6479b304, com.jrp.pma.entities.Project@64093a52, com.jrp.pma.entities.Project@22d088fc]}] with arguments[s] = {}
+2025-03-12T16:53:04.474-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-2] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:07.305-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-03-12T16:53:07.305-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-03-12T16:53:07.305-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:07.305-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Before Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{}] with arguments[s] = {}
+2025-03-12T16:53:07.305-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with Before logging ***
+
+
+2025-03-12T16:53:07.310-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : 
+
+
+2025-03-12T16:53:07.312-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** After Method Execution *** 
+ com.jrp.pma.controllers.HomeController, displayHome, [{versionNumber=dev, projects=[com.jrp.pma.entities.Project@655042a8, com.jrp.pma.entities.Project@50c8d438, com.jrp.pma.entities.Project@4e8e2847, com.jrp.pma.entities.Project@664c0759, com.jrp.pma.entities.Project@138f023a, com.jrp.pma.entities.Project@7e045acc, com.jrp.pma.entities.Project@5f18e7d0, com.jrp.pma.entities.Project@5c5f4ec7, com.jrp.pma.entities.Project@1d38016b], employeesListProjectCnt=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@b8e885, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@4687db7d, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2e28cc4f, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@352f1fb7, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@72142557, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@ab0545b, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@6212abf6, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@2f8dc2a4, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@7ce0749f, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@747af5d4], projectStatusCnt=[{"label":"INPROGRESS","stageCount":"5"},{"label":"COMPLETED","stageCount":"1"},{"label":"NOTSTARTED","stageCount":"3"}]}] with arguments[s] = {}
+2025-03-12T16:53:07.312-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] c.j.pma.logging.ApplicationLoggerAspect  : *** Done with After logging ***
+
+
+2025-03-12T16:53:07.316-04:00 DEBUG 13512 --- [project-management] [http-nio-8080-exec-3] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F5109F8F8037E7F2DDAEB2E4CC53766B], Granted Authorities=[ROLE_ADMIN]]]
+2025-03-12T22:40:12.263-04:00  INFO 13512 --- [project-management] [RMI TCP Connection(736)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-03-12T22:40:12.283-04:00  INFO 13512 --- [project-management] [RMI TCP Connection(736)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-12T22:40:12.295-04:00  INFO 13512 --- [project-management] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-12T22:40:12.304-04:00  INFO 13512 --- [project-management] [RMI TCP Connection(736)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
