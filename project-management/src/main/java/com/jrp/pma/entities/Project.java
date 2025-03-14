@@ -1,7 +1,10 @@
 package com.jrp.pma.entities;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -27,6 +30,12 @@ public class Project {
 	private String stage; // NOTSTARTED. COMPLETED, INPROGRESS
 
 	private String description;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date startDate;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date endDate;
 
 	@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,
 			CascadeType.PERSIST }, fetch = FetchType.LAZY) // mapped by the project field on employee
@@ -89,5 +98,21 @@ public class Project {
 			employees = new ArrayList<>();
 		}
 		this.employees.add(emp);
+	}
+
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 }

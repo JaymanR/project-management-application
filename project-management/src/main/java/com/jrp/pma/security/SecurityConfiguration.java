@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfiguration {
-
+/**
 	private final DataSource dataSource;
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class SecurityConfiguration {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authorize) -> authorize
 				.requestMatchers("/", "/register", "/register/save").permitAll()
-				.requestMatchers("/projects/new", "/employees/new").hasRole("ADMIN")
+				//.requestMatchers("/projects/new", "/employees/new").hasRole("ADMIN")
 				.anyRequest().authenticated())
 				.httpBasic(Customizer.withDefaults()).formLogin(Customizer.withDefaults());
 
@@ -48,4 +48,5 @@ public class SecurityConfiguration {
 
 		return userDetailsManager;
 	}
+	**/
 }

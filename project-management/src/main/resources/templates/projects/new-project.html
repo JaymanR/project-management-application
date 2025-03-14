@@ -5,24 +5,56 @@
 </head>
 <body>
 	<nav th:replace="~{layouts::navbar}"></nav>
+	<br>
 	<div class="container">
 		<form action="/projects/save" th:object="${project}" method="POST">
-		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-			<input type="text" placeholder="Project Name"
-				th:field="${project.name}"> <select
-				th:field="${project.stage}">
-				<option th:value="NOTSTARTED">Not Started</option>
-				<option th:value="INPROGRESS">In Progress</option>
-				<option th:value="COMPLETED">Completed</option>
-			</select>
-			<textarea type="text" placeholder="Enter Project Description"
-				th:field="${project.description}"></textarea>
-			<select th:field="*{employees}" multiple="multiple">
-				<option th:each="employee:${allEmployees}"
-					th:value="${employee.employeeId}" th:text="${employee.firstName}">
-				</option>
-			</select>
-			<button type="submit">Create Project</button>
+			<input type="hidden" th:name="${_csrf.parameterName}"
+				th:value="${_csrf.token}" /> <input type="hidden"
+				th:field="${project.projectId}" />
+			<div class="form-group row">
+				<input type="text" placeholder="Project Name"
+					th:field="${project.name}">
+			</div>
+			<div class="form-group row">
+				<select th:field="${project.stage}">
+					<option th:value="NOTSTARTED">Not Started</option>
+					<option th:value="INPROGRESS">In Progress</option>
+					<option th:value="COMPLETED">Completed</option>
+				</select>
+			</div>
+			<div class="form-group row">
+				<textarea type="text" placeholder="Enter Project Description"
+					th:field="${project.description}"></textarea>
+			</div>
+			<div class="form-group row">
+				<select th:field="*{employees}" multiple="multiple">
+					<option th:each="employee:${allEmployees}"
+						th:value="${employee.employeeId}" th:text="${employee.firstName}">
+					</option>
+				</select>
+			</div>
+			Project Start Date:
+			<div class="form-group row">
+				<input id="dp3" type="text" class="form-control mb-4 col-2 col-xs-4"
+					placeholder="Start Date" th:field="${project.startDate}" />
+			</div>
+
+			Project End Date:
+			<div class="form-group row">
+				<input id="dp4" type="text" class="form-control mb-4 col-2 col-xs-4"
+					placeholder="End Date" th:field="${project.endDate}" />
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#dp3, #dp4').datepicker({
+						format : 'yyyy-mm-dd', // Must match Spring's expected format
+						autoclose : true,
+						todayHighlight : true
+					});
+				});
+			</script>
+
+			<button class="btn btn-info col-2" type="submit">Submit</button>
 		</form>
 	</div>
 </body>

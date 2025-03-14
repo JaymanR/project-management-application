@@ -5,15 +5,26 @@
 </head>
 <body>
 	<nav th:replace="~{layouts::navbar}"></nav>
+	<br>
 	<div class="container">
 		<form action="/employees/save" th:object="${employee}" method="POST">
 			<input type="hidden" th:name="${_csrf.parameterName}"
-				th:value="${_csrf.token}" /> <input type="text"
-				placeholder="First Name" th:field="${employee.firstName}"> <input
-				type="text" placeholder="Last Name" th:field="${employee.lastName}">
-			<input type="text" placeholder="Email address"
-				th:field="${employee.email}">
-			<button type="submit">Add Employee</button>
+				th:value="${_csrf.token}" /> <input type="hidden"
+				th:field="${employee.employeeId}" />
+			<div class="form-group row">
+				<input type="text" placeholder="First Name"
+					th:field="${employee.firstName}" />
+			</div>
+			<div class="form-group row">
+				<input type="text" placeholder="Last Name"
+					th:field="${employee.lastName}" />
+			</div>
+			<div class="form-group row">
+				<input type="text" placeholder="Email address"
+					th:field="${employee.email}" />
+			</div>
+			<button class="btn btn-info col-2" type="submit">Add
+				Employee</button>
 		</form>
 	</div>
 </body>

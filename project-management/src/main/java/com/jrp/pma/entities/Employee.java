@@ -13,6 +13,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.SequenceGenerator;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Employee {
@@ -22,8 +25,16 @@ public class Employee {
 	@SequenceGenerator(name = "employee_seq", sequenceName = "employee_seq", allocationSize = 1)
 	private long employeeId;
 
+	@NotBlank(message="Must give first name")
+	@Size(min=2, max=30)
 	private String firstName;
+	
+	@NotBlank(message="Must give last name")
+	@Size(min=2, max=30)
 	private String lastName;
+	
+	@NotBlank
+	@Email(message="Must give a valid email address")
 	private String email;
 
 	@ManyToMany(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH,

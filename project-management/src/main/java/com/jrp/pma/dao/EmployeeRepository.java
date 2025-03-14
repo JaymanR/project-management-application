@@ -1,13 +1,16 @@
 package com.jrp.pma.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.jrp.pma.dto.EmployeeProject;
 import com.jrp.pma.entities.Employee;
 
+@RepositoryRestResource(collectionResourceRel = "apiemployees", path="apiemployees")
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 	
 	@Override
@@ -21,4 +24,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 			+ " GROUP BY e.first_name, e.last_name"
 			+ " ORDER BY 3 DESC")
 	public List<EmployeeProject> employeeProjects();
+	
+	public Optional<Employee> findById(long theId);
+	
 }

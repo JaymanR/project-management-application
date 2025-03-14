@@ -1,6 +1,7 @@
 package com.jrp.pma.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,5 +51,20 @@ public class ProjectController {
 		proService.save(project);
 		// redirecting to prevent duplicate submissions
 		return "redirect:/projects/new";
+	}
+	
+	@GetMapping("/update")
+	public String displayProjectUpdateForm(@RequestParam("id") long theId, Model model) {
+		Optional<Project> theProj = proService.findById(theId);
+		model.addAttribute("project", theProj);
+		
+		return "projects/new-project";
+	}
+	
+	@GetMapping("/delete")
+	public String deleteProject(@RequestParam("id") long theId, Model model) {
+		proService.deleteById(theId);
+		
+		return "redirect:/projects";
 	}
 }
