@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{layouts::header}">
-<title>New Employee</title>
+    <title>New Employee</title>
 </head>
 <body>
-	<nav th:replace="~{layouts::navbar}"></nav>
-	<br>
-	<div class="container">
-		<form action="/employees/save" th:object="${employee}" method="POST">
-			<input type="hidden" th:name="${_csrf.parameterName}"
-				th:value="${_csrf.token}" /> <input type="hidden"
-				th:field="${employee.employeeId}" />
-			<div class="form-group row">
-				<input type="text" placeholder="First Name"
-					th:field="${employee.firstName}" />
-			</div>
-			<div class="form-group row">
-				<input type="text" placeholder="Last Name"
-					th:field="${employee.lastName}" />
-			</div>
-			<div class="form-group row">
-				<input type="text" placeholder="Email address"
-					th:field="${employee.email}" />
-			</div>
-			<button class="btn btn-info col-2" type="submit">Add
-				Employee</button>
-		</form>
-	</div>
+    <nav th:replace="~{layouts::navbar}"></nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Employee Form</h3>
+				<hr>
+                <form action="/employees/save" th:object="${employee}" method="POST">
+                    <!-- CSRF Token -->
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+                    <!-- Employee ID (Hidden) -->
+                    <input type="hidden" th:field="${employee.employeeId}" />
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="Enter first name" th:field="${employee.firstName}" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Enter last name" th:field="${employee.lastName}" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter email address" th:field="${employee.email}" required />
+                    </div>
+
+                    <button class="btn btn-info btn-block" type="submit">Enter Employee</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

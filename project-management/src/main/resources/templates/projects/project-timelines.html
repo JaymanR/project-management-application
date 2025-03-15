@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{layouts :: header}"></head>
-
-<nav th:replace="~{layouts::navbar}"></nav>
-
+<head th:replace="~{layouts::header}">
+    <title>Project Timelines</title>
+    <style>
+        #chart_div {
+            width: 100%;
+            height: 80vh;
+            min-height: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            #chart_div {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
 <body>
-    <br>
-    <h2 class="text-center">Project Timelines</h2>
+    <nav th:replace="~{layouts::navbar}"></nav>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        var chartData = "[[${projectTimeList}]]";
-        var chartDataDecoded = decodeHtml(chartData);
+    <div class="container-fluid mt-4">
+        <h2 class="text-center">Project Timelines</h2>
+        <hr>
 
-        if (!chartDataDecoded || chartDataDecoded.trim() === "null") {
-            chartDataDecoded = "[]";
-        }
+        <!-- Google Charts Library -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                var chartData = "[[${projectTimeList}]]";
+                var chartDataDecoded = decodeHtml(chartData);
 
-        var chartJsonArray;
-        try {
-            chartJsonArray = JSON.parse(chartDataDecoded);
-        } catch (error) {
-            console.error("Invalid JSON format:", error);
-            chartJsonArray = [];
-        }
+                if (!chartDataDecoded || chartDataDecoded.trim() === "null") {
+                    chartDataDecoded = "[]";
+                }
 
-        var resultArray = [];
+                var chartJsonArray;
+                try {
+                    chartJsonArray = JSON.parse(chartDataDecoded);
+                } catch (error) {
+                    console.error("Invalid JSON format:", error);
+                    chartJsonArray = [];
+                }
 
-        for (var i = 0; i < chartJsonArray.length; i++) {
-            var project = chartJsonArray[i];
-            var projectName = project.projectName ? project.projectName : `Project ${i + 1}`;
-            resultArray.push([
-                projectName,
-                new Date(project.startDate),
-                new Date(project.endDate)
-            ]);
-        }
+                var resultArray = chartJsonArray.map((project, index) => [
+                    project.projectName || `Project ${index + 1}`,
+                    new Date(project.startDate),
+                    new Date(project.endDate)
+                ]);
 
-        google.charts.load('current', { packages: ['timeline'] });
-        google.charts.setOnLoadCallback(drawChart);
+                google.charts.load('current', { packages: ['timeline'] });
+                google.charts.setOnLoadCallback(() => drawChart(resultArray));
 
-        function drawChart() {
-            var container = document.getElementById('chart_div');
-            var chart = new google.visualization.Timeline(container);
-            var dataTable = new google.visualization.DataTable();
+                function drawChart(data) {
+                    var container = document.getElementById('chart_div');
+                    var chart = new google.visualization.Timeline(container);
+                    var dataTable = new google.visualization.DataTable();
 
-            dataTable.addColumn({ type: 'string', id: 'Project' });
-            dataTable.addColumn({ type: 'date', id: 'Start' });
-            dataTable.addColumn({ type: 'date', id: 'End' });
+                    dataTable.addColumn({ type: 'string', id: 'Project' });
+                    dataTable.addColumn({ type: 'date', id: 'Start' });
+                    dataTable.addColumn({ type: 'date', id: 'End' });
 
-            dataTable.addRows(resultArray);
-            chart.draw(dataTable);
-        }
+                    dataTable.addRows(data);
+                    chart.draw(dataTable, {
+                        height: document.documentElement.clientHeight * 0.8,
+                        width: '100%'
+                    });
+                }
 
-        function decodeHtml(html) {
-            var txt = document.createElement("textarea");
-            txt.innerHTML = html;
-            return txt.value;
-        }
-    </script>
-    <div id="chart_div"></div>
+                function decodeHtml(html) {
+                    var txt = document.createElement("textarea");
+                    txt.innerHTML = html;
+                    return txt.value;
+                }
+            });
+        </script>
+
+        <div id="chart_div" class="mt-4"></div>
+    </div>
 </body>
 </html>

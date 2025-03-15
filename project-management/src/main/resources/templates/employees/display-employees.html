@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{layouts::header}">
-<title>Employees</title>
+    <title>Employees</title>
 </head>
 <body>
-	<nav th:replace="~{layouts::navbar}"></nav>
-	<div class="container">
-		<h3>Employee Directory</h3>
-		<hr>
-		<!-- New Employee Button -->
-		<a th:href="@{/employees/new}" class="btn btn-primary btn-sm mb-3">
-			Add Employee </a> <br>
-		<table class="table table-bordered table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Email</th>
-					<th>Action</th>
-				</tr>
-			</thead>
-			<tbody>
-			
-				<tr th:each="anEmployee : ${employees}">
-					<td th:text="${anEmployee.firstName}">
-					<td th:text="${anEmployee.lastName}">
-					<td th:text="${anEmployee.email}">
-					<td><a
-						th:href="@{/employees/update(id=${anEmployee.employeeId})}"
-						class="btn btn-info btn-sm">Update </a> <a
-						th:href="@{/employees/delete(id=${anEmployee.employeeId})}"
-						class="btn btn-danger btn-sm"
-						onClick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">Delete
-					</a></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+    <nav th:replace="~{layouts::navbar}"></nav>
+	<br>
+    <div class="container">
+        <h3 class="text-center mb-4">Employee Directory</h3>
+        <hr>
+
+        <!-- New Employee Button -->
+        <a th:href="@{/employees/new}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="anEmployee : ${employees}">
+                    <td th:text="${anEmployee.firstName}"></td>
+                    <td th:text="${anEmployee.lastName}"></td>
+                    <td th:text="${anEmployee.email}"></td>
+                    <td>
+                        <a th:href="@{/employees/update(id=${anEmployee.employeeId})}" class="btn btn-info btn-sm">Update</a>
+                        <a th:href="@{/employees/delete(id=${anEmployee.employeeId})}" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Are you sure you want to delete this employee?')">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
