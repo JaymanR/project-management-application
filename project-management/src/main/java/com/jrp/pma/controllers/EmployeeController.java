@@ -62,6 +62,6 @@ public class EmployeeController {
 	public String deleteEmployee(@RequestParam("id") long theId, Model model) {
 		empService.deleteById(theId);
 		
-		return "redirect:/employees/new";
+		return "redirect:/employees";
 	}
 }

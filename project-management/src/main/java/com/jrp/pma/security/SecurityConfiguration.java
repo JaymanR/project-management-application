@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfiguration {
-/**
+
 	private final DataSource dataSource;
 	
 	@Autowired
@@ -48,5 +48,4 @@ public class SecurityConfiguration {
 
 		return userDetailsManager;
 	}
-	**/
 }
