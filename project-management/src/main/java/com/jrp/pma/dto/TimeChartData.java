@@ -4,7 +4,9 @@ import java.util.Date;
 
 public interface TimeChartData {
 	
-	public String getProjectDate();
+	public String getProjectName();
+	
+	public String getProjectStage();
 	
 	public Date getStartDate();
 	

@@ -18,6 +18,7 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 			+ " GROUP BY stage")
 	public List<ChartData> getProjectStatus();
 
-	@Query(nativeQuery = true, value = "SELECT name as projectName, start_date as startDate, end_date as endDate FROM project WHERE start_date IS NOT NULL AND end_date IS NOT NULL")
+	@Query(nativeQuery = true, value = "SELECT name as projectName, stage as projectStage, start_date as startDate, end_date as endDate"
+			+ " FROM project WHERE start_date IS NOT NULL AND end_date IS NOT NULL")
 	public List<TimeChartData> getTimeData();
 }

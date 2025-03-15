@@ -8,11 +8,17 @@
             height: 80vh;
             min-height: 500px;
         }
-        
         @media (max-width: 768px) {
             #chart_div {
                 height: 70vh;
             }
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .filter-buttons button {
+            margin: 5px;
         }
     </style>
 </head>
@@ -22,6 +28,14 @@
     <div class="container-fluid mt-4">
         <h2 class="text-center">Project Timelines</h2>
         <hr>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="btn btn-primary filter-btn" data-stage="ALL">Show All</button>
+            <button class="btn btn-secondary filter-btn" data-stage="NOTSTARTED">Not Started</button>
+            <button class="btn btn-info filter-btn" data-stage="INPROGRESS">In Progress</button>
+            <button class="btn btn-success filter-btn" data-stage="COMPLETED">Completed</button>
+        </div>
 
         <!-- Google Charts Library -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -42,16 +56,17 @@
                     chartJsonArray = [];
                 }
 
-                var resultArray = chartJsonArray.map((project, index) => [
-                    project.projectName || `Project ${index + 1}`,
-                    new Date(project.startDate),
-                    new Date(project.endDate)
-                ]);
+                let originalData = chartJsonArray.map((project, index) => ({
+                    name: project.projectName || `Project ${index + 1}`,
+                    start: new Date(project.startDate),
+                    end: new Date(project.endDate),
+                    stage: project.projectStage // New property added
+                }));
 
                 google.charts.load('current', { packages: ['timeline'] });
-                google.charts.setOnLoadCallback(() => drawChart(resultArray));
+                google.charts.setOnLoadCallback(() => drawChart(originalData));
 
-                function drawChart(data) {
+                function drawChart(filteredData) {
                     var container = document.getElementById('chart_div');
                     var chart = new google.visualization.Timeline(container);
                     var dataTable = new google.visualization.DataTable();
@@ -60,12 +75,30 @@
                     dataTable.addColumn({ type: 'date', id: 'Start' });
                     dataTable.addColumn({ type: 'date', id: 'End' });
 
-                    dataTable.addRows(data);
+                    let rows = filteredData.map(project => [project.name, project.start, project.end]);
+                    dataTable.addRows(rows);
+
                     chart.draw(dataTable, {
                         height: document.documentElement.clientHeight * 0.8,
                         width: '100%'
                     });
                 }
+
+                function filterChart(stage) {
+                    if (stage === "ALL") {
+                        drawChart(originalData);
+                    } else {
+                        let filteredData = originalData.filter(project => project.stage === stage);
+                        drawChart(filteredData);
+                    }
+                }
+
+                document.querySelectorAll(".filter-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        let stage = this.getAttribute("data-stage");
+                        filterChart(stage);
+                    });
+                });
 
                 function decodeHtml(html) {
                     var txt = document.createElement("textarea");
