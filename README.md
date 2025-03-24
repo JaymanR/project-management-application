@@ -4,7 +4,13 @@
 This is a **Spring Boot**-based **Project Management Application** that helps users organize, track, and manage projects efficiently. The application provides a structured approach to managing tasks, teams, and deadlines.
 
 ## Video Showcase
-https://youtu.be/OWAfgp0mkyA
+
+<div align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/OWAfgp0mkyA"  
+    title="Project Management App Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
 
 ## Features
 - Create, update, and delete projects
