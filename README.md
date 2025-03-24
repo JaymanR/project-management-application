@@ -5,12 +5,7 @@ This is a **Spring Boot**-based **Project Management Application** that helps us
 
 ## Video Showcase
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OWAfgp0mkyA"  
-    title="Project Management App Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</div>
+[![Project Management App Demo](https://img.youtube.com/vi/OWAfgp0mkyA/0.jpg)](https://www.youtube.com/watch?v=OWAfgp0mkyA)
 
 ## Features
 - Create, update, and delete projects
